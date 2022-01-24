@@ -1,0 +1,133 @@
+
+img {
+    height: 8rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.4rem;
+}
+
+ul li {
+    list-style: none;
+}
+
+aside {
+    width: 30rem;
+    height: calc(100vh - 7rem) ;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: fixed;
+    z-index: 1;
+    top: 7rem;
+    left: 0;
+    box-shadow: 1px 0px 1px #ccc;
+}
+
+.line {
+    width: 30rem;
+    z-index: 1;
+    height: 1px;
+    background-color: rgb(204, 204, 204);
+    top: 9rem;
+}
+
+.btn-header{
+    border: none;
+    background: #fff;
+    color: #000;
+    width: 30rem;
+    padding: 10px;
+    font-size: 16px;
+    position: relative;
+    box-sizing: border-box;
+    transition: all 500ms ease; 
+}
+
+.btn-header:hover {
+    border: transparent;
+    -webkit-transform: translateX(7px);
+      transform: translateX(7px);
+    color: var(--background-header-aside);
+    background-color: #ff7e4a;
+}
+
+.btn-header:active {
+    background-color: var(--main-color);
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    width: 34rem;
+    height: 10rem;
+}
+
+.logo-container img {
+    position: absolute;
+    top: 4rem;
+}
+
+
+.logo-container h2, .logo-container h3 {
+    position: absolute;
+    color: #000;
+    font-size: 2rem;
+    top: 13rem;
+    left: 5rem;
+}
+
+.logo-container h3 {
+    font-size: 1.2rem;
+    top: 15.5rem;
+}
+
+.account-type {
+    color: var(--main-color);
+}
+
+.menu {
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    left: 0;
+    top: 22rem;
+    color: #fff;
+}
+
+.icons {
+    width: 2rem;
+    height: 1.6rem;
+    position: absolute;
+    left: 5rem;
+}
+
+@media (max-width: 750px) {
+    aside {
+        width: 15rem;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        scrollbar-color: transparent;
+    }
+
+    aside::-webkit-scrollbar {
+        width: 1px;
+    }
+
+    .logo-container h2, .logo-container h3 {
+        font-size: 1rem;
+    }
+
+    .logo-container, .logo-container h2, .logo-container h3, .btn-header {
+        margin-left: -1rem;
+    }
+
+    .btn-header {
+        width: 20rem;
+        font-size: 1.1rem;
+    }
+}

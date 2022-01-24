@@ -1,0 +1,42 @@
+header {
+    width: calc(100% + 15rem);
+    height: 7rem;
+    background-color: #d6d6d6;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    color: #fff; 
+}
+
+.user-info {
+    width: var(--width-main);
+    height: 7rem;
+    background-color: var(--background-header-aside);
+    position: absolute;
+    z-index: 1;
+    left: 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7rem;
+}
+
+.user-img {
+    border-radius: 2rem;
+    height: 5rem;
+    position: absolute;
+    left: 2rem;
+    top: 1rem;
+}
+
+#button-positioned {
+    color: #000;
+    background-color: transparent;
+    filter: invert(100%);
+}
+
+#button-positioned:hover {
+    background-color: #ddd;
+    filter: invert(0);
+}

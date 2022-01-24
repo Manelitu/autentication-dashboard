@@ -1,0 +1,243 @@
+.container-small {
+    height: 50rem;
+    width: 30rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0px 1px 1px #ccc;
+    transition: all .5s;
+    margin-top: 4rem;
+}
+
+.container-small:hover {
+    box-shadow: 0px 3px 3px #ccc;
+}
+
+.container-small:hover .type-info p::after {
+    width: 100%;
+    left: 0; 
+}
+
+.container-small:hover .icon-content {
+    filter: invert(0);
+    transform: scale(1.2);
+}
+
+.icon-container {
+    width: 8rem;
+    height: 8rem;
+    background: var(--main-color);
+    position: relative;
+    margin-left: 22rem;
+    margin-top: 2rem;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-content {
+    position: relative;
+    z-index: 2;
+    width: 5rem;
+    height: 5rem;
+    filter: invert(100%);
+    transition: all .5s;
+}
+
+.type-info {
+    display: flex;
+}
+
+.type-info .info {
+    font-size: 1.5rem;
+    position: absolute;
+    margin-top: 4rem;
+    margin-left: 1rem;
+    color: #999;
+    display: flex;
+    flex-direction: column;
+}
+
+.type-info p {
+    font-size: 3rem;
+    position: absolute;
+    margin-top: 7.5rem;
+    margin-left: 1rem;
+    font-weight: 700;
+}
+
+.type-info p::after {
+    position: absolute;
+	content: "";
+	width: 0%;
+	height: 1px;
+	background-color: var(--main-color);
+	left: 50%;
+	bottom: -5px;
+	transition: all 0.4s ease-in-out;
+}
+
+@media (min-width: 1700px ) {
+    .container-small {
+        height: 15rem;
+        width: 45rem;   
+    }
+
+    .icon-container {
+        margin-top: 4rem;
+        margin-left: 33rem;   
+    }
+}
+
+@media (max-width: 1700px) {
+    .container-small{
+        height: 10rem;
+        width: 30rem;
+    }
+
+    .icon-container {
+        width: 6rem;
+        height: 5rem;
+    }
+
+    .icon-content {
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+
+    .type-info .info {
+        margin-top: 2rem;
+    }
+
+    .type-info p {
+        font-size: 2.5rem;
+        margin-top: 4.5rem;
+    }
+}
+
+@media (max-width: 1240px) {
+    .container-small {
+        height: 15rem;
+        width: 70rem;
+    }
+
+    .icon-container {
+        height: 10rem;
+        width: 10rem;
+    }
+
+    .icon-content {
+        height: 6rem;
+        width: 6rem;
+    }
+
+    .type-info .info {
+        font-size: 3rem;
+        margin-top: 2rem;
+        margin-left: -5rem;
+    }
+
+    .type-info p {
+        font-size: 4rem;
+        margin-top: 7rem;
+        margin-left: -5rem;
+    }
+}
+
+@media (max-width: 1040px) {
+    .container-small {
+        height: 10rem;
+        width: 55rem;
+    }
+
+    .icon-container {
+        height: 8rem;
+        width: 8rem;
+        margin-top: 1rem;
+    }
+
+    .icon-content {
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .type-info .info {
+        font-size: 2rem;
+        margin-top: 2rem;
+        margin-left: -5rem;
+    }
+
+    .type-info p {
+        font-size: 2.5rem;
+        margin-top: 6rem;
+        margin-left: -5rem;
+    }
+}
+
+@media (max-width: 870px) {
+    .container-small {
+        height: 10rem;
+        width: 30rem;
+    }
+
+    .icon-container {
+        height: 6rem;
+        width: 6rem;
+        margin-top: 2rem;
+    }
+
+    .icon-content {
+        height: 4rem;
+        width: 4rem;
+    }
+
+    .type-info .info {
+        font-size: 2rem;
+        margin-left: 2rem;
+    }
+
+    .type-info p {
+        font-size: 2.5rem;
+        margin-top: 5rem;
+        margin-left: 2rem;
+    }
+}
+
+@media (max-width: 610px) {
+    .container-small {
+        height: 8rem;
+        width: 20rem;
+    }
+
+    .icon-container {
+        height: 3rem;
+        width: 4rem;
+        margin-top: 2.5rem;
+        margin-right: 9rem;
+    }
+
+    .icon-content {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .type-info .info {
+        font-size: 1rem;
+        margin-left: 8rem;
+    }
+
+    .type-info p {
+        font-size: 1.8rem;
+        margin-top: 4rem;
+        margin-left: 8rem;
+    }
+
+    .container-small:hover .icon-content {
+        filter: invert(0);
+        transform: scale(0.8);
+    }
+}

@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+.autentication {
+    height: 50rem;
+    width: 40rem;
+    background-color: #ffffff;
+    border-radius: 10em 0 10em 0;
+    box-shadow: 6px 6px 10px #aa665c;
+}
+
+.user-image, .background-user-image {
+    width: 10em;
+    height: 10em;
+    position: absolute;
+    margin-left: 15em;
+    margin-top: -5em;
+}
+
+.background-user-image {
+    box-shadow: 0.1rem 0.3rem 7px #b1b1b1;
+    background-color: #fffffffd;
+    border-radius: 100%;
+}
+
+.login-title {
+    font-family: 'Titillium Web';
+    position: absolute;
+    font-size: 3em;
+    margin-top: 6rem;
+    margin-left: 15.5rem;
+}
+
+.form-area form {
+    height: 23rem;
+    width: 35rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    position: absolute;
+    margin-top: 12rem;
+    margin-left: 5rem;
+}
+
+label {
+    font-size: 1.7rem;
+    font-weight: 100;
+}
+
+.user-form {
+    width: 30rem;
+    height: 3rem;
+    border: transparent;
+    border-bottom: 1px solid #000000;
+    margin-top: -20px;
+}
+
+.user-form:focus {
+    outline: none;
+    border-bottom: 1px solid #E96D71;
+}
+
+.user-form::placeholder {
+    color: #00000060;
+}
+
+.button {
+    font-size: 1.6rem;
+    font-weight: 400;
+    height: 5rem;
+    width: 30rem;
+    margin-top: 1rem;
+    border: transparent;
+    background-color: #EF8E80;
+    color: #fff;
+    border-radius: 3rem 0 3rem 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.button[disabled] {
+    color: #fff;
+    border: transparent;
+    background-color: #000000;
+    position: relative;
+    margin-left: 10rem;
+    width: 10rem;
+    border-radius: 1.5rem 0 1.5rem 0;
+}
+
+.button:hover:not(.button[disabled]) {
+    color: #fff;
+    background-color: #e97563;
+    border: transparent;
+    background-image: none;
+    border-radius: 0 3rem 0 3rem;
+}
+
+.link-disabled {
+    pointer-events: none; 
+}
+
+.help-area a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1.3rem;
+    margin-bottom: 1.3rem;
+}
+
+.help-area a:hover {
+    color: #EF8E80;
+}
+
+.help-area {
+    width: 20rem;
+    height: 5rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    position: absolute;
+    margin-top: 36rem;
+    margin-left: 5rem;
+}
