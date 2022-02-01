@@ -2,7 +2,7 @@
 import React from 'react';
 import './Aside.css';
 import userLogo from './../../assets/img/user-icon.svg';
-import ButtonHeader from '../button-header/Button';
+import ButtonHeader from '../button-aside/Button';
 import DashboardLogo from './../../assets/icons/dashboard.svg';
 import GraphLogo from './../../assets/icons/graph.svg';
 import UserLogo from './../../assets/icons/user.svg';
@@ -20,22 +20,30 @@ const Menu = props => {
                 <h3>Conta: <span className="account-type">{props.accountType}</span></h3>
             </div>
             <div className="menu">
-                <Link to="dashboard">
+                <Link to="/home">
                     <ButtonHeader icon={GraphLogo} text={'Dashboard'}/>
                 </Link>
                 <div className="line"></div>
-                <Link to="graph">
+
+                <Link to="/graph">
                     <ButtonHeader icon={DashboardLogo} text={'Gráficos'}/>
                 </Link>
-                
                 <div className="line"></div>
-                <ButtonHeader icon={UserLogo} text={'Usuário'}/>
+
+                <Link to="/user">
+                    <ButtonHeader icon={UserLogo} text={'Usuário'}/>
+                </Link>
                 <div className="line"></div>
+
                 <ButtonHeader icon={Coin} text={'Créditos'}/>
                 <div className="line"></div>
+
                 <ButtonHeader icon={Invoice} text={'Fatura'}/>
                 <div className="line"></div>
-                <ButtonHeader icon={Support} text={'Suporte'}/>
+                
+                <Link to="/support">
+                    <ButtonHeader icon={Support} text={'Suporte'}/>
+                </Link>
                 <div className="line"></div>
             </div>
         </aside>

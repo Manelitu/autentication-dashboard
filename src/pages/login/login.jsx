@@ -1,19 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from 'react-router-dom';
 import './login.css';
 import Sunne from './../../assets/img/sunne-logo.png';
+import { Formik, Field, Form, ErrorMessage } from 'formik';
+import schema from "../../assets/utils/schema";
 
 const Login = (props) => {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+
+    const onSubmit = (values, {setSubmitting}) => {
+        setTimeout(() => {
+            alert(JSON.stringify(values, null, 2));
+            setSubmitting(false);
+        }, 400);
+    }
 
     const linkStyle = {
         width: '0'
     };
 
-    const stateHandle = () => email.length === 0 || password.length === 0;
-
-        return (
+    return (
 
         <section className="autentication">
             <div className="background-user-image"></div>
@@ -21,45 +26,52 @@ const Login = (props) => {
             <h2 className="login-title">Log in</h2>
 
             <div className="form-area">
-                <form>
-                    <label for="name">Email: </label>
-                    <input 
-                        className="user-form user" 
-                        type="text" 
-                        name="email" 
-                        id="name" 
-                        required
-                        autoFocus 
-                        value={email}
-                        onChange={e => setEmail(e.target.value)}
-                        autoComplete="off" 
-                        placeholder="Digite seu email"/>
-
-                    <label for="password">Senha: </label>
-                    <input 
-                        className="user-form password" 
-                        type="password" 
-                        name="user" 
-                        id="password" 
-                        required
-                        value={password}
-                        onChange={e => setPassword(e.target.value)}
-                        placeholder="Digite sua senha"></input>
+                <Formik
+                    onSubmit={onSubmit}
+                    validationSchema={schema}
+                    initialValues={{
+                        email: '',
+                        password: '',
                         
-                    <Link to="/home" style={linkStyle}>
-                            <button
-                                className="button" 
-                                type="submit" 
-                                value="Login"
-                                disabled={stateHandle()}> Login
-                            </button>
-                    </Link>
-                </form>
+                    }}>
+                   {({ isValid }) => (
+                        <Form>
+                            <label for="name">Email: </label>
+                            <Field 
+                                name="email"
+                                className="user-form user" 
+                                type="text" 
+                                id="name" 
+                                autoFocus
+                                autoComplete="off" 
+                                placeholder="Digite seu email"/>
+                            <ErrorMessage name="email" component='div'/>
+
+                            <label for="password">Senha: </label>
+                            <Field 
+                                className="user-form password" 
+                                type="password" 
+                                name="password" 
+                                id="password" 
+                                placeholder="Digite sua senha"></Field>
+                            <ErrorMessage name="password" component='div'/>
+                                
+                            <Link to="/home" style={linkStyle}>
+                                    <button
+                                        className='button' 
+                                        type="submit"
+                                        disabled={!isValid}> Login
+                                    </button>
+                            </Link>
+                        </Form>
+                   )}
+                    
+                </Formik>
             </div>
 
             <div className="help-area">
                 <Link to="/forgot-password">Esqueceu sua senha?</Link>
-                <Link to="sign-up">Ainda não possui uma conta?</Link>
+                <Link to="signup">Ainda não possui uma conta?</Link>
             </div>
 
         </section>

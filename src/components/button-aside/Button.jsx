@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 
-
 const Button = props => {
     return (
             <button

@@ -1,12 +1,13 @@
-main {
+.main-background {
     min-height: 100vh;
-    max-height: 200%;
+    max-height: 250%;
     width: calc(100% - 30rem);
     position: absolute;
     top: 7rem;
     z-index: 1;
     left: 30rem;
     background: #eee;
+    overflow: hidden;
 }
 
 .flex-container {
