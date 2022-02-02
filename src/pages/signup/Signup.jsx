@@ -60,11 +60,6 @@ export function FormikStepper({
   );
 }
 
-
-export function FormikStep({ children, ...props }: FormikConfig<FormikValues>) {
-
-} 
-
 export default function Signup() {
   return (
     <Card>
